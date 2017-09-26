@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Randonnées.com</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a [routerLink]="['/']">Accueil</a></li>
+            <li class="dropdown"><a [routerLink]="['/hikes']">Randonnées</a></li>
+            <li><a [routerLink]="['/contact']">Contact</a></li>
+            <li><a [routerLink]="['/map']">Maps</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+
+<router-outlet></router-outlet>
+

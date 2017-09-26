@@ -1,0 +1,10 @@
+<h2>Bienvenu sur ce site consacré à la randonnée </h2>
+<div>
+    Filtrer par : <input type="text" [(ngModel)]="serchTerm" placeholder="name">
+</div>
+<div *ngFor="let hike of hikes | hikeFilter:serchTerm">
+
+
+    <hike-summary [hk]="hike" (addHikeAsFavorite)="addToMyTodoHikes($event)"></hike-summary>
+</div>
+

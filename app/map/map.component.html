@@ -1,0 +1,24 @@
+<div class="row">
+
+   <div>
+       <button (click)="geoCode()">Localiser</button>
+   </div>
+    <div>
+
+    </div>
+    <sebm-google-map [latitude]="lat1" [longitude]="lng1"
+                     [latitude]="lat2" [longitude]="lng2">
+        <sebm-google-map-marker [latitude]="lat1" [longitude]="lng1" [markerDraggable]="true"
+        (dragEnd)="onCoordMarquerDropped($event)">
+
+        </sebm-google-map-marker>
+
+    </sebm-google-map>
+
+    <div *ngIf="defaultLatLan">
+    Longitude : {{coordLat}} - latitude : {{coorordLan}}
+    </div>
+    <div *ngIf="!defaultLatLan">
+        Veuillez déplacer le marqueur pour obtenir les coordonnées GPS!
+    </div>
+</div>
